@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.barrery.parkbuddy.TitleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.barrery.parkbuddy.TitleLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        </ListView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/users_comment"
+            android:text="车场评价"
+            android:background="@drawable/shape"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+        <TextView
+            android:id="@+id/select_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:text="请选择车位："/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="5"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="71dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ToggleButton
+                    android:layout_gravity="center"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textOff="车位A1"
+                    android:textOn=""
+                    android:background="@drawable/chewei"
+                    android:id="@+id/Togglebutton1" />
+                <ToggleButton android:textOff="车位B6"
+                    android:textOn=""
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/chewei"
+                    android:layout_gravity="center"
+                    android:id="@+id/Togglebutton5" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="71dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ToggleButton
+                    android:layout_gravity="center"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textOff=""
+                    android:textOn=""
+                    android:background="@drawable/car_info"
+                    android:id="@+id/Togglebutton2" />
+                <ToggleButton android:textOff="车位B7"
+                    android:textOn=""
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/chewei"
+                    android:layout_gravity="center"
+                    android:id="@+id/Togglebutton6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="71dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ToggleButton
+                    android:layout_gravity="center"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textOff="车位A3"
+                    android:textOn=""
+                    android:background="@drawable/chewei"
+                    android:id="@+id/Togglebutton3" />
+                <ToggleButton android:textOff=""
+                    android:textOn=""
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/car_info"
+                    android:layout_gravity="center"
+                    android:id="@+id/Togglebutton7" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="71dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ToggleButton
+                    android:layout_gravity="center"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textOff=""
+                    android:textOn=""
+                    android:background="@drawable/car_info"
+                    android:id="@+id/Togglebutton4" />
+                <ToggleButton android:textOff="车位B9"
+                    android:textOn=""
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/chewei"
+                    android:layout_gravity="center"
+                    android:id="@+id/Togglebutton8" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="71dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ToggleButton
+                    android:layout_gravity="center"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textOff="车位A5"
+                    android:textOn=""
+                    android:background="@drawable/chewei"
+                    android:id="@+id/Togglebutton9" />
+                <ToggleButton android:textOff=""
+                    android:textOn=""
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/car_info"
+                    android:layout_gravity="center"
+                    android:id="@+id/Togglebutton10" />
+            </LinearLayout>
+        </GridLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/shape"
+            android:text="预支付"/>
+    </LinearLayout>
+
+</LinearLayout>

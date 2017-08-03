@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.barrery.parkbuddy">
+
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/application_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="52f6f5dff407a641c06ac8ae524439d0"/>
+        <!--android:value="a361316de07599f6ea78737986e97d04"-->
+
+        <service android:name="com.amap.api.location.APSService" />
+        <service android:name="com.iflytek.afadapter.service.AFAdapterService" />
+
+        <receiver android:name=".Receiver">
+            <intent-filter>
+                <action android:name="com.vrmms.intent.MUSIC" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".LoadingActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.amap.api.navi.AmapRouteActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity android:name=".CarLocationInformation.CarLocationInfoActivity" />
+        <activity android:name=".Comment.CommentActivity" />
+        <activity
+            android:name=".Payment.PaymentActivity"
+            android:supportsRtl="true" />
+        <activity android:name=".Comment.MoreCommentActivity" />
+        <activity android:name=".PoiSearch.PoiAroundSearchActivity" />
+        <activity android:name=".Payment.FinishPayActivity" />
+        <activity android:name=".DepotInfo.MainActivity"/>
+    </application>
+
+</manifest>

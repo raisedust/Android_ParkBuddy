@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ParkBuddy</string>
+    <string name="confirm_order">确认订单</string>
+    <string name="add_comment">请添加评价</string>
+
+    <string name="no_result">对不起，没有搜索到相关数据！</string>
+</resources>
